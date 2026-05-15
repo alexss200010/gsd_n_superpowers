@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+src/.DS_Store
+.npm-cache/
+.vercel/
+vite.config.ts.timestamp-*.mjs
+*.log
