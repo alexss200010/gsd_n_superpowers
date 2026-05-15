@@ -197,8 +197,12 @@ code {
 
 .methodology-card__body strong {
   color: #18201c;
-  font-size: clamp(1.55rem, 3vw, 2.6rem);
-  line-height: 1;
+  /* Same scale as the home-page override below — kept here for non-home contexts. */
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  word-break: keep-all;
 }
 
 .methodology-card__body span {
@@ -1367,9 +1371,16 @@ code {
 .methodology-card__body strong {
   color: var(--ink);
   font-family: Georgia, "Times New Roman", ui-serif, serif;
-  font-size: clamp(2rem, 3vw, 2.75rem);
-  letter-spacing: 0;
-  overflow-wrap: anywhere;
+  /* Sized to fit "SUPERPOWERS" (11 chars) on one line inside a ~340px card. */
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  /* Uppercase so "Git", "GSD", "Superpowers" share the same visual weight. */
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  /* Wrap on whitespace only — never mid-word. */
+  overflow-wrap: normal;
+  word-break: keep-all;
+  text-wrap: balance;
 }
 
 .methodology-card__body span {
